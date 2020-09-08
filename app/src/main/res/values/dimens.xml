@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mediumVerticalPadding">16dp</dimen>
+    <dimen name="mediumHorizontalPadding">16dp</dimen>
+    <dimen name="nameSize">30dp</dimen>
+    <dimen name="phoneSize">15dp</dimen>
+    <dimen name="emailSize">15dp</dimen>
+    <dimen name="layoutMarginTop">5dp</dimen>
+    <dimen name="layoutMarginLeft">10dp</dimen>
+</resources>

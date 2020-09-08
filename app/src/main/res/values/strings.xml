@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Mis Contactos</string>
+    <string name="nombre">Cristian Camilo</string>
+    <string name="telefono">(+57) 314 517 2604</string>
+    <string name="email">camilocc@gmail.com</string>
+    <string name="pName">name</string>
+    <string name="pPhone">phone</string>
+    <string name="pEmail">email</string>
+
+
+</resources>

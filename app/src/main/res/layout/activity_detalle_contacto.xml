@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="@dimen/mediumVerticalPadding"
+    android:paddingLeft="@dimen/mediumVerticalPadding"
+    android:paddingBottom="@dimen/mediumHorizontalPadding"
+    android:paddingTop="@dimen/mediumHorizontalPadding"
+    android:orientation="vertical"
+    tools:context=".DetalleContacto">
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre"
+        android:textStyle="bold"
+        android:textSize="@dimen/nameSize"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layoutMarginTop"
+        android:orientation="horizontal"
+        android:onClick="llamar">
+
+        <ImageView
+            android:id="@+id/ivPhone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/phonerounded"/>
+
+        <TextView
+            android:id="@+id/tvTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/telefono"
+            android:textSize="@dimen/phoneSize"
+            android:layout_marginLeft="@dimen/layoutMarginLeft"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layoutMarginTop"
+        android:orientation="horizontal"
+        android:onClick="enviarEmail">
+
+        <ImageView
+            android:id="@+id/ivEmail"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/emailrounded"/>
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/emailSize"
+            android:layout_marginLeft="@dimen/layoutMarginLeft"
+            android:text="@string/email"/>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
