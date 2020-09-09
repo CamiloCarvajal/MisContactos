@@ -40,9 +40,10 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(getResources().getString(R.string.pPhone), contactos.get(i).getPhone());
                 intent.putExtra(getResources().getString(R.string.pEmail), contactos.get(i).getEmail());
                 startActivity(intent);
+//                Finaliza una actividad
+                finish();
             }
         });
-
     }
 
     private void loadContacts(){

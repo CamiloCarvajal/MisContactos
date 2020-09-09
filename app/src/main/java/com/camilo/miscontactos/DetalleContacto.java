@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 
@@ -40,15 +42,31 @@ public class DetalleContacto extends AppCompatActivity {
     }
 
     public void enviarEmail(View view){
-        String email = tvEmail.getText().toString();
-        Intent emailIntent = new Intent(Intent.ACTION_SEND);
-        emailIntent.setData(Uri.parse("mailto:"));
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, email);
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Android Studio App Test");
-        emailIntent.setType("message/rfc822");
-        startActivity(Intent.createChooser(emailIntent, "Email"));
+        String email    = tvEmail.getText().toString();
+        String subject  = "[Subject]Esta es una prueba";
+        String bodyText = "[Body]Esta es una prueba ";
+        String mailto   = "mailto:"+email+
+                            "?cc=" + "alice@example.com" +
+                            "&subject=" + Uri.encode(subject) +
+                            "&body=" + Uri.encode(bodyText);
 
+//        Ver mensajes en la consola LogCat
+//        Log.println(Log.WARN, "WARN_LOG", mailto);
+
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+        emailIntent.setData(Uri.parse(mailto));
+
+//      createChooser Permite elegir con que aplicacion enviamos el email
+        startActivity(Intent.createChooser(emailIntent, "Email"));
     }
 
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 }
